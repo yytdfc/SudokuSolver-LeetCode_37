@@ -29,7 +29,7 @@ class Solution(object):
             board[i]=''.join(map(b2c,[self.board[(i,j)] for j in range(9)]))
     def __str__(self):
         b2c=lambda b: str(self.sol[b]) if b in self.sol else ' '
-        return ''.join(['['+'|'.join([b2c(self.board[(r,c)]) for c in xrange(9)])+']\n' for r in xrange(9)])
+        return ''.join(['['+'|'.join([b2c(self.board[(r,c)]) for c in range(9)])+']\n' for r in range(9)])
     def solve(self):
         self.first_stage()
         if self.quick_check():
